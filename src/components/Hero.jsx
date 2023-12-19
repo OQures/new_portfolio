@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap } from '../assets';
+import { shaq, bwmap, worldmap, bwmap2, bwmap3, movie2, gif2 } from '../assets';
 
 const Hero = () => {
   return (
@@ -10,14 +10,14 @@ const Hero = () => {
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
           src={bwmap}
-          alt="world map"
+          alt="waves"
           className="w-full h-full sm:block hidden object-cover"
         />
       </div>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
-          src={worldmap}
-          alt="world map"
+          src={movie2}
+          alt="waves"
           className="w-full h-full sm:hidden block object-cover"
         />
       </div>
@@ -79,7 +79,8 @@ const Hero = () => {
           </a>
         </div>
 
-        {/* Your image comes here. Feel free to remove image if you don't plan to have one.*/}
+        {/* Image goes here*/}
+
         <div>{/*
           <img
             className="absolute bottom-0 ml-[50vw] 

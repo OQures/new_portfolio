@@ -30,34 +30,34 @@ import {
   kelhel,
   microverse,
   anacondas,
-} from '../assets';
+} from "../assets";
 
 export const navLinks = [
   {
-    id: 'about',
-    title: 'About',
+    id: "about",
+    title: "About",
   },
   {
-    id: 'projects',
-    title: 'Projects',
+    id: "projects",
+    title: "Projects",
   },
   {
-    id: 'contact',
-    title: 'Contact',
+    id: "contact",
+    title: "Contact",
   },
 ];
 
 const services = [
   {
-    title: 'Data Scientist / Analyst',
+    title: "Data Scientist / Analyst",
     icon: backend,
   },
   {
-    title: 'Frontend Developer',
+    title: "Frontend Developer",
     icon: frontend,
   },
   {
-    title: 'UI/UX Design',
+    title: "UI/UX Design",
     icon: ux,
   },
   /*{
@@ -68,47 +68,47 @@ const services = [
 
 const technologies = [
   {
-    name: 'Python',
+    name: "Python",
     icon: python,
   },
   {
-    name: 'Tableau',
+    name: "Tableau",
     icon: tableau,
   },
   {
-    name: 'Anacondas',
+    name: "Anacondas",
     icon: anacondas,
   },
   {
-    name: 'HTML 5',
+    name: "HTML 5",
     icon: html,
   },
   {
-    name: 'CSS 3',
+    name: "CSS 3",
     icon: css,
   },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     icon: javascript,
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     icon: typescript,
   },
   {
-    name: 'React JS',
+    name: "React JS",
     icon: reactjs,
   },
   {
-    name: 'Redux Toolkit',
+    name: "Redux Toolkit",
     icon: redux,
   },
   {
-    name: 'Tailwind CSS',
+    name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: 'Node JS',
+    name: "Node JS",
     icon: nodejs,
   },
   /*{
@@ -125,11 +125,11 @@ const technologies = [
   },
   */
   {
-    name: 'git',
+    name: "git",
     icon: git,
   },
   {
-    name: 'figma',
+    name: "figma",
     icon: figma,
   },
   /*{
@@ -140,147 +140,145 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'Front-End Developer',
-    company_name: 'Cover Hunt',
+    title: "Student at Towson University",
+    company_name: "Bachelors in Cell and Molecular Biology",
     icon: coverhunt,
-    iconBg: '#333333',
-    date: 'Aug 2021 - Feb 2022',
+    iconBg: "#333333",
+    date: "Aug 2017 - June 2022",
   },
   {
-    title: 'Mentor (Volunteer)',
-    company_name: 'Microverse',
+    title: "Nucamp Coding Bootcamp",
+    company_name: "Certified Full Stack Developer",
     icon: microverse,
-    iconBg: '#333333',
-    date: 'Mar 2022 - May 2022',
+    iconBg: "#333333",
+    date: "Aug 2022 - Jan 2023",
   },
   {
-    title: 'Junior Software Engineer',
-    company_name: 'Kelhel',
+    title: "Web Developer Intern",
+    company_name: "NORAD",
     icon: kelhel,
-    iconBg: '#333333',
-    date: 'May 2022 - Oct 2022',
+    iconBg: "#333333",
+    date: "Jan 2023 - Jun 2023",
   },
   {
-    title: 'Full Stack Developer',
-    company_name: 'Diversity Cyber Council',
+    title: " The University of Texas at Austin",
+    company_name: "Post Graduate Degree in Data Science and Business Analytics",
     icon: dcc,
-    iconBg: '#333333',
-    date: 'Sep 2022 - Present',
+    iconBg: "#333333",
+    date: "Sep 2022 - Present",
   },
 ];
 
 const projects = [
   {
-    id: 'project-1',
-    name: 'Placeholder 1',
-    description: 'Description of placeholder 1',
+    id: "project-1",
+    name: "Placeholder 1",
+    description: "Description of placeholder 1",
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
+        name: "react",
+        color: "blue-text-gradient",
       },
       {
-        name: 'mongodb',
-        color: 'green-text-gradient',
+        name: "mongodb",
+        color: "green-text-gradient",
       },
       {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
+        name: "tailwind",
+        color: "pink-text-gradient",
       },
     ],
     image: komikult,
-    repo: 'https://github.com/OQures',
-    demo: 'https://github.com/OQures',
+    repo: "https://github.com/OQures",
+    demo: "https://github.com/OQures",
   },
   {
-    id: 'project-2',
-    name: 'Placeholder 2',
-    description:
-      'Description of placeholder 2',
+    id: "project-2",
+    name: "Placeholder 2",
+    description: "Description of placeholder 2",
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
+        name: "react",
+        color: "blue-text-gradient",
       },
       {
-        name: 'restapi',
-        color: 'green-text-gradient',
+        name: "restapi",
+        color: "green-text-gradient",
       },
       {
-        name: 'scss',
-        color: 'pink-text-gradient',
+        name: "scss",
+        color: "pink-text-gradient",
       },
     ],
     image: leaderboard,
-    repo: 'https://github.com/OQures',
-    demo: 'https://github.com/OQures',
+    repo: "https://github.com/OQures",
+    demo: "https://github.com/OQures",
   },
   {
-    id: 'project-3',
-    name: 'Placeholder 3',
-    description: 'Description of placeholder 3',
+    id: "project-3",
+    name: "Placeholder 3",
+    description: "Description of placeholder 3",
     tags: [
       {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
+        name: "nextjs",
+        color: "blue-text-gradient",
       },
       {
-        name: 'supabase',
-        color: 'green-text-gradient',
+        name: "supabase",
+        color: "green-text-gradient",
       },
       {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: "css",
+        color: "pink-text-gradient",
       },
     ],
     image: math,
-    repo: 'https://github.com/OQures',
-    demo: 'https://github.com/OQures',
+    repo: "https://github.com/OQures",
+    demo: "https://github.com/OQures",
   },
   {
-    id: 'project-4',
-    name: 'Placeholder 4',
+    id: "project-4",
+    name: "Placeholder 4",
     description: `Description of placeholder 4`,
     tags: [
       {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
+        name: "nextjs",
+        color: "blue-text-gradient",
       },
       {
-        name: 'supabase',
-        color: 'green-text-gradient',
+        name: "supabase",
+        color: "green-text-gradient",
       },
       {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: "css",
+        color: "pink-text-gradient",
       },
     ],
     image: movie,
-    repo: 'https://github.com/OQures',
-    demo: 'https://github.com/OQures',
+    repo: "https://github.com/OQures",
+    demo: "https://github.com/OQures",
   },
   {
-    id: 'project-5',
-    name: 'Placeholder 5',
-    description:
-      'Description of placeholder 5',
+    id: "project-5",
+    name: "Placeholder 5",
+    description: "Description of placeholder 5",
     tags: [
       {
-        name: 'nextjs',
-        color: 'blue-text-gradient',
+        name: "nextjs",
+        color: "blue-text-gradient",
       },
       {
-        name: 'supabase',
-        color: 'green-text-gradient',
+        name: "supabase",
+        color: "green-text-gradient",
       },
       {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: "css",
+        color: "pink-text-gradient",
       },
     ],
     image: nyeusi,
-    repo: 'https://github.com/OQures',
-    demo: 'https://github.com/OQures',
+    repo: "https://github.com/OQures",
+    demo: "https://github.com/OQures",
   },
 ];
 

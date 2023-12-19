@@ -1,4 +1,8 @@
 import bwmap from './backgrounds/bw-map.jpeg';
+import bwmap2 from './backgrounds/bw-map.gif';
+import bwmap3 from './backgrounds/bw-map.webp';
+import movie2 from './backgrounds/movie.gif';
+import gif2 from './backgrounds/gif2.gif';
 import nairobi from './backgrounds/nairobi.png';
 import whiteabstract from './backgrounds/white-abstract.png';
 import worldmap from './backgrounds/world-map.png';
@@ -56,6 +60,10 @@ import placeholder from './projects/placeholder.png';
 
 export {
   bwmap,
+  bwmap2,
+  bwmap3,
+  movie2,
+  gif2,
   nairobi,
   whiteabstract,
   worldmap,
