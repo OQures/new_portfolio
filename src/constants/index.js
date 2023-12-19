@@ -140,7 +140,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Student at Towson University",
+    title: "Towson University",
     company_name: "Bachelors in Cell and Molecular Biology",
     icon: coverhunt,
     iconBg: "#333333",
