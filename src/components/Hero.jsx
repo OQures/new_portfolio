@@ -2,21 +2,21 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { shaq, bwmap, worldmap, bwmap2, bwmap3, movie2, gif2 } from '../assets';
+import { wavyy } from '../assets';
 
 const Hero = () => {
   return (
     <>
-      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
+      <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen bg-white">
         <img
-          src={bwmap}
+          src={wavyy}
           alt="waves"
-          className="w-full h-full sm:block hidden object-cover"
+          className="w-90 h-full sm:block hidden object-cover"
         />
       </div>
       <div className="absolute top-0 left-0 z-0 h-[100vh] w-screen">
         <img
-          src={movie2}
+          src={wavyy}
           alt="waves"
           className="w-full h-full sm:hidden block object-cover"
         />
