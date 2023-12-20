@@ -44,6 +44,10 @@ import coverhunt from './company/coverhunt.png';
 import dcc from './company/dcc.png';
 import kelhel from './company/kelhel.png';
 import microverse from './company/microverse.png';
+import towson from './company/towson.png';
+import nc from './company/nc.svg';
+import norad from './company/norad.png';
+import uta from './company/uta.png';
 
 import komikult from './projects/komikult.png';
 import leaderboard from './projects/leaderboard.png';
@@ -100,5 +104,9 @@ export {
   dcc,
   kelhel,
   microverse,
+  towson,
+  nc,
+  norad,
+  uta,
   placeholder,
 };

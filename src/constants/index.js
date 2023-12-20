@@ -29,7 +29,11 @@ import {
   dcc,
   kelhel,
   microverse,
+  towson,
   anacondas,
+  nc,
+  norad,
+  uta,
 } from "../assets";
 
 export const navLinks = [
@@ -142,28 +146,28 @@ const experiences = [
   {
     title: "Towson University",
     company_name: "Bachelors in Cell and Molecular Biology",
-    icon: coverhunt,
+    icon: towson,
     iconBg: "#333333",
     date: "Aug 2017 - June 2022",
   },
   {
     title: "Nucamp Coding Bootcamp",
     company_name: "Certified Full Stack Developer",
-    icon: microverse,
+    icon: nc,
     iconBg: "#333333",
     date: "Aug 2022 - Jan 2023",
   },
   {
     title: "Web Developer Intern",
     company_name: "NORAD",
-    icon: kelhel,
+    icon: norad,
     iconBg: "#333333",
     date: "Jan 2023 - Jun 2023",
   },
   {
     title: " The University of Texas at Austin",
     company_name: "Post Graduate Degree in Data Science and Business Analytics",
-    icon: dcc,
+    icon: uta,
     iconBg: "#333333",
     date: "Sep 2022 - Present",
   },
