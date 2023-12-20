@@ -22,11 +22,13 @@ const App = () => {
           <About />
         </div>
 
+        <Projects />
+
         <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
           <Tech />
         </div>
 
-        <Projects />
+        
 
         <div
           className="bg-experience bg-cover bg-center bg-no-repeat 
