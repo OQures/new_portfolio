@@ -70,6 +70,7 @@ const Contact = () => {
         <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
 
         <form
+          data-netlify="true"
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-10 flex flex-col gap-6 font-poppins">
