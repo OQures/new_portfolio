@@ -102,7 +102,7 @@ const Experience = () => {
               ease-in-out"
               onClick={() =>
                 window.open(
-                  'https://github.com/OQures/onlineresume/raw/main/OssamaQureshiResume.docx', //paste the link to your resume here
+                  'https://oqures.github.io/onlineresume/OssamaQureshiResume.pdf', //paste the link to resume here
                   '_blank'
                 )
               }
