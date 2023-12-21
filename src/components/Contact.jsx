@@ -30,7 +30,7 @@ const Contact = () => {
     emailjs
       .send(
         'service_qc3bm9f', // paste ServiceID here (get one when your service is created).
-        'template_0qsmnax', // paste TemplateID here (find it under email templates).
+        'template_hcwtssl', // paste TemplateID here (find it under email templates).
         {
           from_name: form.name,
           to_name: 'Ossama Qureshi', // name.
@@ -70,7 +70,6 @@ const Contact = () => {
         <h3 className={styles.sectionHeadTextLight}>Contact.</h3>
 
         <form
-          data-netlify="true"
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-10 flex flex-col gap-6 font-poppins">
