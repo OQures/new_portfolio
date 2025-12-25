@@ -2,7 +2,15 @@ import wavyy from './backgrounds/wavyy.gif';
 import nairobi from './backgrounds/nairobi.png';
 
 
-import logo from './logo/logo-black.png';
+import logo from './logo/Logo.png';
+
+// Service images
+import vacuum from './services/vacuum.png';
+import brightwork from './services/brightwork.png';
+import ceramic from './services/ceramic.jpg';
+import polish from './services/polish.jpg';
+import wash from './services/wash.jpg';
+import detailing from './services/detailing.jpg';
 import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
@@ -62,6 +70,12 @@ export {
   nairobi,
   logo,
   logotext,
+  vacuum,
+  brightwork,
+  ceramic,
+  polish,
+  wash,
+  detailing,
   shaq,
   backend,
   ux,

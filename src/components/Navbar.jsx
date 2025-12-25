@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { close, menu, logo, logotext } from '../assets';
+import { logo } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -10,8 +10,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-2 fixed 
-      top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
+      className={`${styles.paddingX} w-full flex items-center py-1 xs:py-2 fixed
+      top-0 z-20 bg-black sm:opacity-[0.97] shadow-sm`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -22,27 +22,18 @@ const Navbar = () => {
           }}>
           <img
             src={logo}
-            alt="logo"
-            className="sm:w-[150px] sm:h-[70px] w-[100px] h-[70px] object-contain"
+            alt="Ascend Aviation Refinement"
+            className="w-[140px] h-[65px] xs:w-[180px] xs:h-[80px] sm:w-[240px] sm:h-[110px] object-contain"
           />
-
-          {/* space for optional text / future use */}
-
-          {/*<img
-            src={logotext}
-            alt="logo"
-            className="sm:w-[150px] sm:h-[75px] w-[150px] h-[75px] -ml-[0.6rem] object-contain pl-[15px]"
-        />*/}
-        
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
+        <ul className="list-none hidden sm:flex flex-row gap-8 lg:gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? 'text-french' : 'text-eerieBlack'
-              } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer nav-links`}
+                active === nav.title ? 'text-[#4fb3d9]' : 'text-white'
+              } hover:text-[#4fb3d9] text-[16px] lg:text-[18px] font-medium font-poppins
+                uppercase tracking-[2px] lg:tracking-[3px] cursor-pointer transition duration-300`}
               onClick={() => setActive(nav.title)}>
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -53,29 +44,28 @@ const Navbar = () => {
         <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
             <div
-              className={`p-6 bg-flashWhite opacity-[0.98] absolute 
+              className={`p-4 xs:p-6 bg-black opacity-[0.98] absolute
                 top-0 left-0 w-screen h-[100vh] z-10 menu ${
                   toggle ? 'menu-open' : 'menu-close'
                 }`}>
               <div className="flex justify-end">
-                <img
-                  src={close}
-                  alt="close"
-                  className="w-[22px] h-[22px] object-contain cursor-pointer"
-                  onClick={() => setToggle(!toggle)}
-                />
+                <div
+                  className="w-[30px] h-[30px] flex items-center justify-center cursor-pointer text-white text-2xl"
+                  onClick={() => setToggle(!toggle)}>
+                  ✕
+                </div>
               </div>
               <ul
-                className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[10rem] -ml-[35px]">
+                className="list-none flex flex-col gap-6 xs:gap-8
+                items-center justify-center mt-[6rem] xs:mt-[8rem]">
                 {navLinks.map((nav) => (
                   <li
                     id={nav.id}
                     key={nav.id}
                     className={`${
-                      active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[88px] font-bold font-arenq 
-                      uppercase tracking-[1px] cursor-pointer`}
+                      active === nav.title ? 'text-[#4fb3d9]' : 'text-white'
+                    } text-[26px] xs:text-[32px] font-bold font-poppins
+                      uppercase tracking-[2px] cursor-pointer`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);
@@ -86,12 +76,11 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <img
-              src={menu}
-              alt="menu"
-              className="w-[34px] h-[34px] object-contain cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
+            <div
+              className="w-[30px] h-[30px] xs:w-[34px] xs:h-[34px] flex items-center justify-center cursor-pointer text-white text-xl xs:text-2xl"
+              onClick={() => setToggle(!toggle)}>
+              ☰
+            </div>
           )}
         </div>
       </div>

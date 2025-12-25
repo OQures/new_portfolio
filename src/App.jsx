@@ -2,46 +2,34 @@ import { BrowserRouter } from 'react-router-dom';
 import {
   About,
   Contact,
-  Experience,
   Hero,
   Navbar,
-  Tech,
-  Projects,
+  Services,
+  Footer,
 } from './components';
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0">
+      <div className="relative z-0 bg-white">
         <div>
           <Navbar />
           <Hero />
         </div>
 
-        <div className="bg-about bg-cover bg-center bg-no-repeat">
+        <div className="bg-gray-50">
           <About />
         </div>
 
-        <Projects />
-
-        <div className="bg-tech bg-cover bg-center bg-no-repeat pb-10">
-          <Tech />
+        <div className="bg-white">
+          <Services />
         </div>
 
-        
-
-        <div
-          className="bg-experience bg-cover bg-center bg-no-repeat 
-            rounded-tl-[150px] rounded-br-[150px]">
-          <div
-            className="bg-experienceLight bg-cover bg-center 
-            bg-no-repeat rounded-tl-[150px] rounded-br-[130px]">
-            <Experience />
-          </div>
-        </div>
-        <div className="relative z-0">
+        <div className="relative z-0 bg-gray-50">
           <Contact />
         </div>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );
