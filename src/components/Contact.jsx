@@ -6,6 +6,35 @@ import { slideIn, fadeIn } from '../utils/motion';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError('There was an error submitting the form. Please try again.');
+      }
+    } catch (err) {
+      setError('There was an error submitting the form. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   if (submitted) {
     return (
@@ -37,12 +66,18 @@ const Contact = () => {
           </p>
         </div>
 
+        {error && (
+          <div className="mb-3 p-3 bg-red-50 border border-red-200 rounded-lg">
+            <p className="text-red-600 text-[13px] xs:text-[14px]">{error}</p>
+          </div>
+        )}
+
         <form
           name="quote-request"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          onSubmit={() => setSubmitted(true)}
+          onSubmit={handleSubmit}
           className="flex flex-col gap-2 xs:gap-3 font-poppins">
           <input type="hidden" name="form-name" value="quote-request" />
           <p className="hidden">
@@ -127,12 +162,13 @@ const Contact = () => {
 
           <button
             type="submit"
+            disabled={submitting}
             className="flex justify-center text-[13px] xs:text-[14px] sm:text-[16px] text-white
             font-bold font-poppins items-center py-2.5 xs:py-3 px-4 xs:px-6
             rounded-lg bg-[#4fb3d9]
-            hover:bg-[#3a9dc3]
+            hover:bg-[#3a9dc3] disabled:bg-[#a3d4e8] disabled:cursor-not-allowed
             transition duration-300 ease-in-out uppercase tracking-wider shadow-md mt-1 xs:mt-2">
-            Submit Quote Request
+            {submitting ? 'Submitting...' : 'Submit Quote Request'}
           </button>
         </form>
       </motion.div>

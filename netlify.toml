@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# IMPORTANT: Form submission email notifications
+#
+# After deployment, you need to configure the email notification in the Netlify UI:
+# 1. Go to https://app.netlify.com/projects/flourishing-praline-1bcbdf/configuration/notifications
+# 2. Find the existing "Form submission notifications" for "submission_created"
+# 3. Edit the email hook that currently sends to ossamasq1@outlook.com
+# 4. Change the email address to: ascendaviationrefinement@gmail.com
+# 5. Save the notification settings
+#
+# Alternatively, you can add a new email notification:
+# 1. Click "Add notification" > "Email notification"
+# 2. Select event type: "Form submission"
+# 3. Enter email: ascendaviationrefinement@gmail.com
+# 4. Save
