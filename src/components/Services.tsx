@@ -254,7 +254,7 @@ export function Services({ onRequestQuote }: ServicesProps) {
           >
             <p className={tierLabelClass}>Specialized services</p>
           </div>
-          <div className="grid min-h-0 min-w-0 flex-1 auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-2 lg:gap-8 2xl:grid-cols-4 2xl:gap-10">
+          <div className="grid min-h-0 min-w-0 flex-1 auto-rows-fr grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-7 lg:grid-cols-2 lg:gap-8">
             {specializedServices.map((s, i) => (
               <ServiceCard
                 key={s.title}
