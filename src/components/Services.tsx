@@ -147,7 +147,9 @@ const detailsBtnCompact =
   "mt-auto inline-flex min-h-[44px] shrink-0 translate-y-1 items-center gap-2 rounded-lg pt-4 text-sm font-semibold text-ascend-cyan-dark opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 focus-visible:translate-y-0 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ascend-cyan-dark motion-reduce:translate-y-0 motion-reduce:opacity-100";
 
 const quoteCtaBtn =
-  "animate-quote-cta-attn mt-auto inline-flex min-h-[44px] shrink-0 items-center gap-2 rounded-lg pt-4 text-sm font-semibold text-ascend-cyan-dark underline-offset-4 transition hover:text-ascend-ink hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ascend-cyan-dark";
+  "animate-quote-cta-attn-services inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full border border-ascend-cyan/25 bg-white px-4 py-2.5 text-sm font-semibold text-ascend-ink shadow-sm transition duration-200 ease-out hover:border-ascend-cyan-dark/35 hover:bg-ascend-muted/40 hover:text-ascend-cyan-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ascend-cyan-dark";
+
+const quoteCtaRow = "mt-auto flex shrink-0 justify-end pt-3 -me-2 -mb-2 sm:-me-3 sm:-mb-2.5";
 
 const tierLabelClass =
   "font-display text-lg font-bold tracking-tight text-ascend-ink sm:text-xl lg:max-w-[11rem]";
@@ -198,10 +200,12 @@ function ServiceCard({ service: s, globalIndex, visible, onDetails, onQuoteClick
             <span aria-hidden>→</span>
           </button>
         ) : (
-          <button type="button" className={quoteCtaBtn} onClick={onQuoteClick}>
-            <span>Request free quote</span>
-            <span aria-hidden>→</span>
-          </button>
+          <div className={quoteCtaRow}>
+            <button type="button" className={quoteCtaBtn} onClick={onQuoteClick}>
+              <span>Request free quote</span>
+              <span aria-hidden>→</span>
+            </button>
+          </div>
         )}
       </div>
     </article>

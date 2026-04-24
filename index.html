@@ -17,6 +17,18 @@
     <title>Ascend Aviation Refinement</title>
   </head>
   <body>
+    <!-- Netlify discovers forms from built HTML; mirrors QuoteModal (name="quote-request"). -->
+    <form name="quote-request" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="phone" />
+      <input type="text" name="aircraft" />
+      <input type="text" name="service" />
+      <input type="text" name="service_region" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consent" />
+      <input type="text" name="bot-field" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

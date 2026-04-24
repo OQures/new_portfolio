@@ -1,7 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "./Button";
 
-const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+const NETLIFY_FORM_NAME = "quote-request";
 
 const serviceOptions = [
   "Interior detailing",
@@ -78,63 +78,62 @@ export function QuoteModal({ open, onClose }: Props) {
     return Object.keys(next).length === 0;
   };
 
-  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
   const submit = async () => {
     setErrorText(null);
     if (!validate()) return;
 
-    if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
-      setStatus("error");
-      setErrorText(
-        "Web3Forms is not configured yet. Add VITE_WEB3FORMS_ACCESS_KEY to a .env file (see .env.example), restart the dev server, and try again."
-      );
-      return;
-    }
-
     setStatus("loading");
 
-    const compiledMessage = [
-      `Service interest: ${service}`,
-      `Service region: DMV / PA / DC`,
-      aircraft.trim() ? `Aircraft / tail: ${aircraft.trim()}` : null,
-      "",
-      message.trim(),
-    ]
-      .filter(Boolean)
-      .join("\n");
+    const params = new URLSearchParams();
+    params.set("form-name", NETLIFY_FORM_NAME);
+    params.set("bot-field", "");
+    params.set("name", name.trim());
+    params.set("email", email.trim());
+    params.set("phone", phone.trim());
+    if (aircraft.trim()) params.set("aircraft", aircraft.trim());
+    params.set("service", service);
+    params.set("message", message.trim());
+    params.set("service_region", "DMV / PA / DC");
+    if (consent) params.set("consent", "yes");
+
+    const devHint = import.meta.env.DEV
+      ? " On localhost use `netlify dev`, or submit from your deployed Netlify URL."
+      : "";
 
     try {
-      const res = await fetch(WEB3FORMS_URL, {
+      const res = await fetch("/", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          access_key: accessKey,
-          subject: "Quote request, Ascend Aviation Refinement",
-          name: name.trim(),
-          email: email.trim(),
-          phone: phone.trim(),
-          message: compiledMessage,
-          replyto: email.trim(),
-          from_name: name.trim(),
-        }),
+        body: params.toString(),
       });
 
-      const data = (await res.json()) as { success?: boolean; message?: string };
-
-      if (!res.ok || !data.success) {
+      let data: { ok?: boolean; error?: string } = {};
+      try {
+        data = (await res.json()) as { ok?: boolean; error?: string };
+      } catch {
         setStatus("error");
-        setErrorText(data.message || "Something went wrong. Please try again in a moment.");
+        setErrorText(
+          `We could not read the server response.${devHint} If this persists, email ascendaviationrefinement@gmail.com.`
+        );
+        return;
+      }
+
+      if (!res.ok || data.ok !== true) {
+        setStatus("error");
+        setErrorText(
+          (data.error && String(data.error)) ||
+            `Something went wrong (${res.status}). Please try again.${devHint}`
+        );
         return;
       }
 
       setStatus("success");
     } catch {
       setStatus("error");
-      setErrorText("Network error. Check your connection and try again.");
+      setErrorText(`Network error. Check your connection and try again.${devHint}`);
     }
   };
 
@@ -195,12 +194,25 @@ export function QuoteModal({ open, onClose }: Props) {
             </div>
           ) : (
             <form
+              name={NETLIFY_FORM_NAME}
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               className="space-y-5"
               onSubmit={(e) => {
                 e.preventDefault();
                 void submit();
               }}
             >
+              <input type="hidden" name="form-name" value={NETLIFY_FORM_NAME} />
+              <input
+                type="text"
+                name="bot-field"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden
+                className="pointer-events-none absolute left-[-10000px] h-px w-px opacity-0"
+              />
               <div>
                 <label htmlFor="q-name" className="text-sm font-medium text-ascend-ink">
                   Full name

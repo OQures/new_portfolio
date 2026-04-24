@@ -78,22 +78,34 @@
     }
   }
 
-  @keyframes quoteCtaGlowPulseLink {
+  /* Specialized-services card only: calmer motion + tighter glow than pill CTAs */
+  @keyframes quoteCtaBobServices {
     from {
-      box-shadow:
-        0 0 72px 8px rgb(90 200 250 / 0.42),
-        0 0 160px 56px rgb(90 200 250 / 0.22),
-        0 0 260px 96px rgb(90 200 250 / 0.12);
+      transform: translate3d(0, 0, 0) scale(1);
     }
     to {
-      box-shadow:
-        0 0 120px 28px rgb(90 200 250 / 0.68),
-        0 0 260px 96px rgb(90 200 250 / 0.4),
-        0 0 380px 140px rgb(90 200 250 / 0.2);
+      transform: translate3d(0, -5px, 0) scale(1.01);
     }
   }
 
-  /* Non-header quote CTAs (Hero + quote section: rounded-full; Services card: rounded-lg) */
+  @keyframes quoteCtaGlowPulseServices {
+    from {
+      box-shadow:
+        0 1px 2px rgb(10 37 64 / 0.04),
+        0 0 0 1px rgb(90 200 250 / 0.12),
+        0 0 32px 2px rgb(90 200 250 / 0.2),
+        0 0 64px 22px rgb(90 200 250 / 0.08);
+    }
+    to {
+      box-shadow:
+        0 4px 14px rgb(10 37 64 / 0.06),
+        0 0 0 1px rgb(90 200 250 / 0.22),
+        0 0 48px 8px rgb(90 200 250 / 0.32),
+        0 0 96px 36px rgb(90 200 250 / 0.12);
+    }
+  }
+
+  /* Non-header quote CTAs (Hero + quote section: full pill buttons) */
   .animate-quote-cta-attn {
     position: relative;
     overflow: visible;
@@ -104,10 +116,14 @@
     will-change: transform, box-shadow;
   }
 
-  .animate-quote-cta-attn.rounded-lg {
+  .animate-quote-cta-attn-services {
+    position: relative;
+    overflow: visible;
+    backface-visibility: hidden;
     animation:
-      quoteCtaBob 2.25s ease-in-out infinite alternate,
-      quoteCtaGlowPulseLink 2.25s ease-in-out infinite alternate;
+      quoteCtaBobServices 2.25s ease-in-out infinite alternate,
+      quoteCtaGlowPulseServices 2.25s ease-in-out infinite alternate;
+    will-change: transform, box-shadow;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -121,10 +137,14 @@
         0 0 180px 56px rgb(90 200 250 / 0.26);
     }
 
-    .animate-quote-cta-attn.rounded-lg {
+    .animate-quote-cta-attn-services {
+      animation: none;
+      will-change: auto;
       box-shadow:
-        0 0 96px 16px rgb(90 200 250 / 0.52),
-        0 0 200px 72px rgb(90 200 250 / 0.28);
+        0 1px 2px rgb(10 37 64 / 0.05),
+        0 0 0 1px rgb(90 200 250 / 0.18),
+        0 0 40px 6px rgb(90 200 250 / 0.28),
+        0 0 72px 28px rgb(90 200 250 / 0.1);
     }
   }
 }
