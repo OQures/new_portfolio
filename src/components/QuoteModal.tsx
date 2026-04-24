@@ -105,25 +105,25 @@ export function QuoteModal({ open, onClose }: Props) {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
-          Accept: "application/json",
         },
         body: params.toString(),
       });
 
-      let data: { ok?: boolean; error?: string } = {};
-      try {
-        data = (await res.json()) as { ok?: boolean; error?: string };
-      } catch {
-        setStatus("error");
-        setErrorText(`Something went wrong. Please try again in a moment.${devHint}`);
-        return;
-      }
+      const raw = await res.text();
 
-      if (!res.ok || data.ok !== true) {
+      if (!res.ok) {
+        let apiErr: string | undefined;
+        try {
+          if (raw.trimStart().startsWith("{")) {
+            const d = JSON.parse(raw) as { error?: string };
+            if (d.error) apiErr = String(d.error);
+          }
+        } catch {
+          /* ignore */
+        }
         setStatus("error");
         setErrorText(
-          (data.error && String(data.error)) ||
-            `Something went wrong (${res.status}). Please try again.${devHint}`
+          apiErr || `Something went wrong (${res.status}). Please try again.${devHint}`
         );
         return;
       }
