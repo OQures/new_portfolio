@@ -44,4 +44,87 @@
       transition-duration: 0.01ms;
     }
   }
+
+  /*
+   * Outer box-shadow paints outside the border box, so the cyan aura never sits “on” the
+   * button face (unlike a ::pseudo with z-index: -1, which still stacks above the fill).
+   * card-sm layers are repeated in keyframes so Tailwind’s shadow isn’t overridden by animation.
+   */
+  @keyframes quoteCtaBob {
+    from {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    to {
+      transform: translate3d(0, -14px, 0) scale(1.045);
+    }
+  }
+
+  @keyframes quoteCtaGlowPulseSolid {
+    from {
+      box-shadow:
+        0 13px 27px -5px rgba(50, 50, 93, 0.1),
+        0 8px 16px -8px rgba(0, 0, 0, 0.12),
+        0 0 56px 4px rgb(90 200 250 / 0.38),
+        0 0 140px 44px rgb(90 200 250 / 0.2),
+        0 0 220px 72px rgb(90 200 250 / 0.1);
+    }
+    to {
+      box-shadow:
+        0 13px 27px -5px rgba(50, 50, 93, 0.1),
+        0 8px 16px -8px rgba(0, 0, 0, 0.12),
+        0 0 96px 18px rgb(90 200 250 / 0.62),
+        0 0 220px 72px rgb(90 200 250 / 0.35),
+        0 0 320px 110px rgb(90 200 250 / 0.16);
+    }
+  }
+
+  @keyframes quoteCtaGlowPulseLink {
+    from {
+      box-shadow:
+        0 0 72px 8px rgb(90 200 250 / 0.42),
+        0 0 160px 56px rgb(90 200 250 / 0.22),
+        0 0 260px 96px rgb(90 200 250 / 0.12);
+    }
+    to {
+      box-shadow:
+        0 0 120px 28px rgb(90 200 250 / 0.68),
+        0 0 260px 96px rgb(90 200 250 / 0.4),
+        0 0 380px 140px rgb(90 200 250 / 0.2);
+    }
+  }
+
+  /* Non-header quote CTAs (Hero + quote section: rounded-full; Services card: rounded-lg) */
+  .animate-quote-cta-attn {
+    position: relative;
+    overflow: visible;
+    backface-visibility: hidden;
+    animation:
+      quoteCtaBob 2.25s ease-in-out infinite alternate,
+      quoteCtaGlowPulseSolid 2.25s ease-in-out infinite alternate;
+    will-change: transform, box-shadow;
+  }
+
+  .animate-quote-cta-attn.rounded-lg {
+    animation:
+      quoteCtaBob 2.25s ease-in-out infinite alternate,
+      quoteCtaGlowPulseLink 2.25s ease-in-out infinite alternate;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-quote-cta-attn {
+      animation: none;
+      will-change: auto;
+      box-shadow:
+        0 13px 27px -5px rgba(50, 50, 93, 0.1),
+        0 8px 16px -8px rgba(0, 0, 0, 0.12),
+        0 0 80px 12px rgb(90 200 250 / 0.48),
+        0 0 180px 56px rgb(90 200 250 / 0.26);
+    }
+
+    .animate-quote-cta-attn.rounded-lg {
+      box-shadow:
+        0 0 96px 16px rgb(90 200 250 / 0.52),
+        0 0 200px 72px rgb(90 200 250 / 0.28);
+    }
+  }
 }

@@ -73,8 +73,8 @@ export function Hero({ onQuoteClick }: Props) {
               className="mt-10 flex animate-fade-in-up flex-col gap-3 motion-reduce:animate-none motion-reduce:opacity-100 sm:flex-row sm:items-center"
               style={{ animationDelay: "720ms", animationFillMode: "both" }}
             >
-              <Button variant="primary" onClick={onQuoteClick}>
-                Request a free quote
+              <Button variant="primary" className="animate-quote-cta-attn" onClick={onQuoteClick}>
+                Request free quote
               </Button>
               <button
                 type="button"

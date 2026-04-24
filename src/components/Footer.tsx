@@ -8,7 +8,7 @@ export function Footer() {
   const { ref, visible } = useReveal<HTMLDivElement>();
 
   return (
-    <footer className="relative border-t border-white/10 bg-ascend-ink py-16 text-white">
+    <footer className="relative border-t border-white/10 bg-black py-16 text-white">
       <div
         ref={ref}
         className={`mx-auto max-w-6xl px-4 reveal-ease motion-reduce:translate-y-0 motion-reduce:opacity-100 sm:px-6 lg:px-8 ${

@@ -113,7 +113,7 @@ export function QuoteModal({ open, onClose }: Props) {
         },
         body: JSON.stringify({
           access_key: accessKey,
-          subject: "Quote request — Ascend Aviation Refinement",
+          subject: "Quote request, Ascend Aviation Refinement",
           name: name.trim(),
           email: email.trim(),
           phone: phone.trim(),

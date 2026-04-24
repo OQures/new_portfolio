@@ -37,12 +37,12 @@ function QuoteSection({ onOpen }: { onOpen: () => void }) {
                 <button
                   type="button"
                   onClick={onOpen}
-                  className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-ascend-ink shadow-card-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98] motion-reduce:hover:translate-y-0 motion-reduce:active:scale-100"
+                  className="animate-quote-cta-attn inline-flex min-h-[44px] items-center justify-center rounded-full bg-white px-6 py-3 text-[15px] font-semibold text-ascend-ink shadow-card-sm transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98] motion-reduce:hover:translate-y-0 motion-reduce:active:scale-100"
                 >
-                  Open quote form
+                  Request free quote
                 </button>
                 <a
-                  href="mailto:ascendaviationrefinement@gmail.com?subject=Quote%20request%20%E2%80%94%20Ascend%20Aviation%20Refinement"
+                  href="mailto:ascendaviationrefinement@gmail.com?subject=Quote%20request%2C%20Ascend%20Aviation%20Refinement"
                   className="inline-flex min-h-[44px] items-center justify-center rounded-full border border-white/25 bg-transparent px-6 py-3 text-[15px] font-semibold text-white transition duration-200 ease-out hover:border-white/50 hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.98] motion-reduce:active:scale-100"
                 >
                   Email us instead
@@ -70,17 +70,17 @@ export default function App() {
           id="services"
           eyebrow="Services"
           title="Everything you need to keep your aircraft presentation-ready."
-          subtitle="Five focused programs — scoped clearly, executed consistently, and tuned for the way you operate in the DMV, Pennsylvania, and D.C."
+          subtitle="Focused services with clear scope, reliable execution, and scheduling that fits how you operate in the DMV, Pennsylvania, and D.C."
           tone="muted"
         >
-          <Services />
+          <Services onRequestQuote={() => setQuoteOpen(true)} />
         </Section>
 
         <Section
           id="why"
           eyebrow="Why Ascend"
-          title="Operational polish, not just cosmetic shine."
-          subtitle="We built Ascend around the moments that matter: arrival presence, cabin first impressions, and finishes that hold up to real-world scrutiny."
+          title="Good work in plain terms."
+          subtitle="We detail aircraft across the DMV, Pennsylvania, and D.C. We work with your schedule, keep ramp work simple, and review the job with you before we leave."
         >
           <Why />
         </Section>
@@ -88,8 +88,8 @@ export default function App() {
         <Section
           id="process"
           eyebrow="How it works"
-          title="From inquiry to sign-off, without surprises."
-          subtitle="Clear communication, tight sequencing, and a finish you can approve with confidence."
+          title="From your first message to the walk-around."
+          subtitle="You tell us what you need. We agree scope and timing, do the work, then go through the aircraft with you before we leave."
           tone="muted"
         >
           <Process />
