@@ -41,11 +41,10 @@ export default {
         "drawer-enter": "drawerDown 0.3s cubic-bezier(0.16,1,0.3,1) both",
         "shimmer-slow": "meshShift 14s ease-in-out infinite",
         "bar-grow": "barGrow 0.95s cubic-bezier(0.16,1,0.3,1) both",
+        "bar-grow-y": "barGrowY 0.95s cubic-bezier(0.16,1,0.3,1) both",
         "headline-reveal": "headlineReveal 0.95s cubic-bezier(0.16,1,0.3,1) both",
         "hero-gradient-sweep": "heroGradientSweep 1.35s cubic-bezier(0.16,1,0.3,1) both",
         "service-modal-rise": "serviceModalRise 0.55s cubic-bezier(0.16,1,0.3,1) both",
-        "process-path-draw": "processPathDraw 3.4s cubic-bezier(0.38, 0, 0.2, 1) forwards",
-        "process-path-seg": "processPathDraw 1.4s cubic-bezier(0.33, 0, 0.25, 1) forwards",
       },
       keyframes: {
         float: {
@@ -84,6 +83,10 @@ export default {
           from: { transform: "scaleX(0)" },
           to: { transform: "scaleX(1)" },
         },
+        barGrowY: {
+          from: { transform: "scaleY(0)" },
+          to: { transform: "scaleY(1)" },
+        },
         headlineReveal: {
           from: { clipPath: "inset(-0.14em 100% -0.14em 0)" },
           to: { clipPath: "inset(-0.14em 0% -0.14em 0)" },
@@ -95,10 +98,6 @@ export default {
         serviceModalRise: {
           from: { opacity: "0", transform: "translateY(18px) scale(0.97)" },
           to: { opacity: "1", transform: "translateY(0) scale(1)" },
-        },
-        processPathDraw: {
-          "0%": { strokeDashoffset: "1" },
-          "100%": { strokeDashoffset: "0" },
         },
       },
     },

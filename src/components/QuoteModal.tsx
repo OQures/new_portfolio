@@ -152,30 +152,34 @@ export function QuoteModal({ open, onClose }: Props) {
         className="max-h-[min(92vh,860px)] w-full max-w-lg animate-scale-in overflow-y-auto rounded-2xl border border-ascend-border bg-white shadow-card outline-none motion-reduce:animate-none motion-reduce:opacity-100"
         style={{ animationFillMode: "both" }}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-ascend-border p-6">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ascend-cyan-dark">Free quote</p>
-            <h2 id={titleId} className="mt-1 font-display text-2xl font-bold tracking-tight text-ascend-ink">
-              Tell us about your aircraft
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-ascend-slate">
-              We serve the DMV, Pennsylvania, and D.C. We&apos;ll follow up with availability and next steps.
-            </p>
+        {status !== "success" ? (
+          <div className="flex items-start justify-between gap-4 border-b border-ascend-border p-6">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ascend-cyan-dark">Free quote</p>
+              <h2 id={titleId} className="mt-1 font-display text-2xl font-bold tracking-tight text-ascend-ink">
+                Tell us about your aircraft
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-ascend-slate">
+                We serve the DMV, Pennsylvania, and D.C. We&apos;ll follow up with availability and next steps.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-full border border-ascend-border bg-white px-3 py-1.5 text-sm font-medium text-ascend-slate transition hover:border-slate-300 hover:text-ascend-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ascend-ink"
+              aria-label="Close quote form"
+            >
+              Close
+            </button>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-full border border-ascend-border bg-white px-3 py-1.5 text-sm font-medium text-ascend-slate transition hover:border-slate-300 hover:text-ascend-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ascend-ink"
-            aria-label="Close quote form"
-          >
-            Close
-          </button>
-        </div>
+        ) : null}
 
         <div className="p-6">
           {status === "success" ? (
             <div className="rounded-xl border border-ascend-border bg-ascend-muted p-6 text-center">
-              <p className="font-display text-xl font-bold text-ascend-ink">Submission received!</p>
+              <h2 id={titleId} className="font-display text-xl font-bold text-ascend-ink">
+                Submission received!
+              </h2>
               <p className="mt-3 text-base font-medium text-ascend-ink">We&apos;ll be in touch shortly!</p>
               <p className="mt-3 text-sm leading-relaxed text-ascend-slate">
                 If you don&apos;t hear from us within one business day, email{" "}
