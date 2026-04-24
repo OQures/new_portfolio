@@ -115,9 +115,7 @@ export function QuoteModal({ open, onClose }: Props) {
         data = (await res.json()) as { ok?: boolean; error?: string };
       } catch {
         setStatus("error");
-        setErrorText(
-          `We could not read the server response.${devHint} If this persists, email ascendaviationrefinement@gmail.com.`
-        );
+        setErrorText(`Something went wrong. Please try again in a moment.${devHint}`);
         return;
       }
 
@@ -177,9 +175,10 @@ export function QuoteModal({ open, onClose }: Props) {
         <div className="p-6">
           {status === "success" ? (
             <div className="rounded-xl border border-ascend-border bg-ascend-muted p-6 text-center">
-              <p className="font-display text-xl font-bold text-ascend-ink">Request received</p>
+              <p className="font-display text-xl font-bold text-ascend-ink">Submission received!</p>
+              <p className="mt-3 text-base font-medium text-ascend-ink">We&apos;ll be in touch shortly!</p>
               <p className="mt-3 text-sm leading-relaxed text-ascend-slate">
-                Thank you. If you don&apos;t hear from us within one business day, email{" "}
+                If you don&apos;t hear from us within one business day, email{" "}
                 <a
                   className="font-semibold text-ascend-cyan-dark underline-offset-4 hover:underline"
                   href="mailto:ascendaviationrefinement@gmail.com"
