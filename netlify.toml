@@ -1,0 +1,26 @@
+# https://docs.netlify.com/configure-builds/overview/
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Avoid long-lived cached HTML pointing at old hashed JS (stale quote form after deploys).
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Vite fingerprinted assets are safe to cache aggressively.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
