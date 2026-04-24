@@ -68,7 +68,7 @@ export function ServiceDetailModal({ open, service, onClose }: Props) {
 
         <div className="flex items-start justify-between gap-4 border-b border-ascend-border px-6 pb-5 pt-5">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ascend-cyan-dark">Service briefing</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ascend-cyan-dark">Overview</p>
             <h2 id={titleId} className="mt-1 font-display text-2xl font-bold tracking-tight text-ascend-ink">
               {service.title}
             </h2>

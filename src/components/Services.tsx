@@ -25,7 +25,7 @@ type ServiceEntry = {
 const standardServices: ServiceEntry[] = [
   {
     title: "Interior detailing",
-    body: "Deep cabin reset with aviation-appropriate products, tight Q/A, and attention to touchpoints, trim, and finishes that should read like new.",
+    body: "A full cabin refresh with aircraft-safe products. We clean what people touch, care for leather and trim, and walk the cabin with you before we wrap.",
     image: {
       src: "/services-interior-detail.png",
       alt: "Blueprint-style illustration of a luxury aircraft cabin interior",
@@ -33,18 +33,18 @@ const standardServices: ServiceEntry[] = [
     },
     details: {
       intro:
-        "Your cabin is reset with the restraint aircraft interiors demand: delicate attention where avionics live, restorative care on leathers and textiles, and sanitation where passengers actually touch, finished with a walk-through that catches what a rushed pass never would.",
+        "We work carefully around avionics and sensitive areas, bring leather and fabrics back to a neat, even look, and sanitize galleys, lavs, and tray tables to a steady standard. When we are done, we review the cabin with you so nothing obvious gets missed.",
       bullets: [
-        "Cockpit and displays: controlled, low-risk techniques that clean without inviting moisture or chemistry where it does not belong.",
-        "Leather, vinyl, and soft trim: conditioned for a supple, uniform look; carpets extracted when extraction is the right lever.",
-        "Galleys, lavs, and tray tables: disinfected to a consistent standard so the cabin reads fresh, not merely wiped down.",
-        "Elevated add-ons when you need them: structured disinfection sweeps, biological mess response with proper containment, and allergy-directed galley programs, scoped and priced up front.",
+        "Cockpit and displays: careful cleaning that avoids extra moisture or harsh chemicals where they do not belong.",
+        "Leather, vinyl, and soft trim: cleaned and conditioned so it looks even, not dry or patchy; carpets shampooed when it helps.",
+        "Galleys, lavs, and tray tables: wiped and disinfected so the cabin feels fresh, not just “quick wiped.”",
+        "Add-ons when you need them: deeper disinfection, help after a messy spill (with containment), or galley-focused work for allergies, priced clearly up front.",
       ],
     },
   },
   {
     title: "Basic exterior detailing",
-    body: "Structured exterior program to restore clarity and cleanliness, with an optional wet wash when timing, environment, and aircraft condition allow.",
+    body: "Nose-to-tail exterior cleaning to clear dirt and film. We add a wet wash only when it is safe for your paint, the weather, and where the plane sits.",
     image: {
       src: "/services-exterior-detail.png",
       alt: "Blueprint-style illustration of a technician detailing a small aircraft on the tarmac",
@@ -52,12 +52,12 @@ const standardServices: ServiceEntry[] = [
     },
     details: {
       intro:
-        "A nose-to-tail exterior that reads deliberate: walk-first mindset, careful protection of sensitive areas, and wash discipline that lifts contamination without stressing paint, glass, or brightwork-adjacent edges.",
+        "We start with a walk-around, tape or cover what needs protection, then wash and rinse in an order that pulls grease and ramp grime off without beating up paint, glass, or polished metal edges.",
       bullets: [
-        "Heavy lifting where traffic is ugly: degrease and wash-down sequencing tuned for grease, exhaust film, and ramp grime.",
-        "Wings and windscreen handled with technique that respects glass: controlled passes where bugs and grit like to hide.",
-        "Belly and underbody work that breaks grease free, then cleans back to a neutral surface: no half-step residue story at tie-down.",
-        "Final refinish pass and QC so you leave with even reflectivity and nothing you regret under hangar lights.",
+        "Degrease and wash where exhaust and ramp dirt build up, starting with wings, fuselage, and high-traffic areas.",
+        "Windscreen and windows: slower passes so grit does not scratch the glass.",
+        "Belly and gear areas: grease broken down, then rinsed so you are not left with streaky residue.",
+        "Final wipe-down and quick check in good light so the finish looks even before you fly.",
       ],
     },
   },
@@ -66,7 +66,7 @@ const standardServices: ServiceEntry[] = [
 const specializedServices: ServiceEntry[] = [
   {
     title: "Paint polish",
-    body: "Measured defect removal and gloss recovery, calibrated for aircraft substrates and the realities of ramp operations.",
+    body: "We remove light swirls and oxidation and bring back gloss, using steps and pads suited to aircraft paint and real ramp conditions.",
     image: {
       src: "/services-paint-polish.png",
       alt: "Blueprint-style illustration of a technician power-polishing an aircraft nose cowling",
@@ -74,18 +74,18 @@ const specializedServices: ServiceEntry[] = [
     },
     details: {
       intro:
-        "Paint restored in disciplined stages: the surface is confirmed clean, then polished methodically so gloss returns without the lottery of aggressive single-step shortcuts.",
+        "After the paint is clean and dry, we polish in stages: milder steps first, then only what the finish can handle. The goal is clearer paint without chasing a “quick fix” that thins the clearcoat.",
       bullets: [
-        "Section-by-section machine work with staged abrasives and pads matched to what the finish can safely give.",
-        "Inter-stage cleaning so each grade starts on honest skin: less carryover, more predictable depth recovery.",
-        "Finishing passes that tighten micro-scratch chatter and leave paint that looks intentional from nose to empennage.",
-        "Signed-off inspection under moving light, with a surface ready for protection or show.",
+        "Work in sections with pads and compounds chosen for what your paint can take.",
+        "Rinse or wipe between stages so each step starts on a clean surface.",
+        "Finishing passes to calm fine scratches and even out the shine from nose to tail.",
+        "Final look under a moving light so you can see the job before wax, sealant, or coating.",
       ],
     },
   },
   {
     title: "Ceramic coating",
-    body: "Durable protection where it fits your operation, with improved slickness and easier washdowns while preserving depth.",
+    body: "A long-lasting coating that beads water and makes washing easier when it fits how you use the aircraft.",
     image: {
       src: "/services-ceramic-coating.png",
       alt: "Blueprint-style illustration of a technician applying coating to an aircraft fuselage",
@@ -93,18 +93,18 @@ const specializedServices: ServiceEntry[] = [
     },
     details: {
       intro:
-        "Protection you can feel: professional ceramic systems applied in controlled tiles so coverage is even, cure is respected, and the result is slick, coherent depth, not patchy high spots.",
+        "We apply professional ceramic products in small areas at a time so coverage stays even, cure times are respected, and you do not end up with dull highs and shiny lows.",
       bullets: [
-        "Film tier matched to how hard you fly the aircraft and the level of investment you want on the wall.",
-        "Strict prep and small-area application patterns that chase uniformity over speed.",
-        "Flash- and buff-controlled finishing for a glass-smooth feel and consistent water behavior across the job.",
-        "Straight talk on what ceramic improves for day-two maintenance, and what it never pretends to fix.",
+        "Product level matched to how often you fly and how much protection you want.",
+        "Prep first: wash, decontaminate, and polish only if the paint needs it so the coating bonds well.",
+        "Apply and level by hand so the surface feels smooth and water sheets evenly.",
+        "We tell you plainly what ceramic helps with day to day, and what it does not fix on its own.",
       ],
     },
   },
   {
     title: "Brightwork",
-    body: "Metalwork refined to a controlled shine with disciplined masking, consistent directionality, and expectations set up front.",
+    body: "Polished metal brought back to a clean shine. We mask nearby paint and seals, keep strokes even, and set expectations before we start.",
     image: {
       src: "/services-brightwork.png",
       alt: "Blueprint-style illustration of a technician polishing aircraft brightwork on the wing leading edge",
@@ -112,18 +112,18 @@ const specializedServices: ServiceEntry[] = [
     },
     details: {
       intro:
-        "Leading edges and bright metal brought back with aviation-grade patience: aggressive work only where it earns the right, adjacent structure protected like insurance, and finish lines you are proud to park under lights.",
+        "Leading edges and bright trim get patient, step-by-step work. We only cut hard where it is needed, keep paint and seals covered, and aim for a steady shine you are happy to show under hangar lights.",
       bullets: [
-        "Precision masking and draping so paint, seals, and composites stay out of the polishing line of fire.",
-        "Multi-grade progression from correction to finish: each step earns the next instead of skipping to shine.",
-        "Machine passes kept in a controlled envelope so metal heats and cools predictably: less drama, more control.",
-        "Final hand-back cleaning and an even specular line that reads premium from approach to walk-around.",
+        "Mask and drape so paint, plastic, and composites stay clear of polish splatter.",
+        "Start with coarser steps only where needed, then refine so the metal looks even, not wavy.",
+        "Steady machine speed and pressure so the metal does not overheat.",
+        "Final wipe and walk-around so the reflection looks even from a few steps back.",
       ],
     },
   },
   {
     title: "Other specialized work",
-    body: "If you do not see your service here, ask anyway. We often take related jobs, from small touch-ups to longer services. Use the quote form and we will be straight with you about fit, timing, and how we would handle it.",
+    body: "Do not see your job listed? Ask anyway. We take many related tasks, from small touch-ups to longer projects. Request a quote, and we will be honest about timing, fit, and how we would tackle it.",
     image: {
       src: "/services-specialized-more.png",
       alt: "Blueprint-style illustration of professional detailing tools and supplies",
